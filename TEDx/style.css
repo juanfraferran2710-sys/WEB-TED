@@ -1,0 +1,1921 @@
+/* =========================================================
+   TEDx ESCUELA DE COMERCIO MARTÍN ZAPATA YOUTH
+   STYLE.CSS
+   ========================================================= */
+
+
+/* =========================================================
+   1. CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    line-height: 1.6;
+}
+
+
+/* Evita que las imágenes se desborden */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Links */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   2. VARIABLES
+   ========================================================= */
+
+:root {
+
+    --rojo: #e62b1e;
+    --negro: #111111;
+    --blanco: #ffffff;
+    --gris: #f5f5f5;
+    --gris-medio: #777777;
+    --borde: #dddddd;
+
+}
+
+
+/* =========================================================
+   3. HEADER / NAVBAR
+   ========================================================= */
+
+.header {
+
+    width: 100%;
+    height: 50px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--blanco);
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+
+
+/* Logo */
+
+.logo-container {
+
+    display: flex;
+    align-items: center;
+
+}
+
+.logo-container img {
+
+    width: 200px;
+    height: auto;
+
+}
+
+
+/* Navegación */
+
+.navbar {
+
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+}
+
+.navbar a {
+
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+    transition: 0.3s;
+
+}
+
+
+/* Línea roja al pasar el mouse */
+
+.navbar a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: var(--rojo);
+
+    transition: 0.3s;
+
+}
+
+.navbar a:hover::after {
+
+    width: 100%;
+}
+
+
+/* Botón del header */
+
+/* Botón del header */
+
+.btn-header {
+
+    background-color: var(--rojo);
+    color: white;
+    padding: 10px 24px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 50px; /* O usa 999px para mantener los bordes redondeados perfectos */
+    display: inline-block;
+    transition: 0.3s;
+
+}
+
+.btn-header:hover {
+
+    background-color: #b91f16;
+
+    transform: translateY(-2px);
+
+}
+
+/* =========================================================
+   4. BOTONES
+   ========================================================= */
+
+.btn-primary {
+
+    display: inline-block;
+
+    background-color: var(--rojo);
+    color: var(--blanco);
+
+    padding: 15px 25px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    transition: 0.3s;
+
+}
+
+.btn-primary:hover {
+
+    background-color: #b91f16;
+
+    transform: translateY(-3px);
+
+}
+
+
+.btn-secondary {
+
+    display: inline-block;
+
+    border: 1px solid var(--blanco);
+    color: var(--blanco);
+
+    padding: 14px 25px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: 0.3s;
+
+}
+
+.btn-secondary:hover {
+
+    background-color: var(--blanco);
+    color: var(--negro);
+
+}
+
+
+.text-link {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: var(--rojo);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: 0.3s;
+
+}
+
+.text-link:hover {
+
+    transform: translateX(6px);
+
+}
+
+
+/* =========================================================
+   5. HERO - PÁGINA PRINCIPAL
+   ========================================================= */
+
+.hero {
+
+    min-height: calc(100vh - 82px);
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.60),
+            rgba(0, 0, 0, 0.60)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+}
+
+
+/* Contenido */
+
+.hero-content {
+
+    max-width: 850px;
+
+    animation: aparecer 1s ease;
+
+}
+
+
+.hero-small {
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+    color: #ffffff;
+
+}
+
+
+.hero h1 {
+
+    font-size: clamp(50px, 7vw, 100px);
+
+    line-height: 0.95;
+
+    font-weight: 800;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.hero h1 span {
+
+    color: var(--rojo);
+
+}
+
+
+.hero h2 {
+
+    font-size: clamp(25px, 3vw, 42px);
+
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero p {
+
+    max-width: 600px;
+
+    font-size: 16px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* =========================================================
+   6. ANIMACIÓN
+   ========================================================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   7. TÍTULOS GENERALES
+   ========================================================= */
+
+.section-title {
+
+    margin-bottom: 50px;
+
+}
+
+
+.section-title p {
+
+    color: var(--rojo);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.section-title h2 {
+
+    font-size: clamp(35px, 5vw, 65px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   8. ABOUT
+   ========================================================= */
+
+.about {
+
+    padding: 120px 10%;
+
+    background-color: var(--blanco);
+
+}
+
+
+.about-content {
+
+    max-width: 850px;
+
+}
+
+
+.about-text p {
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+
+    color: #333333;
+
+}
+
+
+/* =========================================================
+   9. EVENT PREVIEW
+   ========================================================= */
+
+.event-preview {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 600px;
+
+}
+
+
+.event-image {
+
+    overflow: hidden;
+
+}
+
+
+.event-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+
+}
+
+
+.event-image:hover img {
+
+    transform: scale(1.04);
+
+}
+
+
+.event-info {
+
+    padding: 80px;
+
+    background-color: var(--negro);
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.event-info > p:first-child {
+
+    color: var(--rojo);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.event-info h2 {
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.event-info p {
+
+    max-width: 500px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =========================================================
+   10. SPEAKERS PREVIEW
+   ========================================================= */
+
+.speakers-preview {
+
+    padding: 120px 8%;
+
+}
+
+
+.speaker-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 40px;
+
+}
+
+
+.speaker-card {
+
+    background-color: var(--gris);
+
+    overflow: hidden;
+
+    transition: 0.4s;
+
+}
+
+
+.speaker-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+
+.speaker-card img {
+
+    width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    filter: grayscale(15%);
+
+    transition: 0.5s;
+
+}
+
+
+.speaker-card:hover img {
+
+    filter: grayscale(0%);
+
+}
+
+
+.speaker-info {
+
+    padding: 25px;
+
+}
+
+
+.speaker-info h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.speaker-info p {
+
+    color: var(--rojo);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   11. CTA
+   ========================================================= */
+
+.cta {
+
+    padding: 120px 8%;
+
+    background-color: var(--rojo);
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+.cta h2 {
+
+    font-size: clamp(40px, 6vw, 80px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 40px;
+
+}
+
+
+.cta .btn-primary {
+
+    background-color: white;
+
+    color: var(--negro);
+
+}
+
+
+.cta .btn-primary:hover {
+
+    background-color: var(--negro);
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   12. HERO DE LAS PÁGINAS INTERNAS
+   ========================================================= */
+
+.page-hero {
+
+    min-height: 430px;
+
+    padding: 100px 10%;
+
+    background-color: var(--negro);
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.page-hero p:first-child {
+
+    color: var(--rojo);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.page-hero h1 {
+
+    font-size: clamp(55px, 8vw, 100px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.page-hero p:last-child {
+
+    max-width: 600px;
+
+    font-size: 18px;
+
+    color: #dddddd;
+
+}
+
+
+/* =========================================================
+   13. EVENT DETAILS
+   ========================================================= */
+
+.event-details {
+
+    padding: 110px 10%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 60px;
+
+}
+
+
+.event-detail {
+
+    border-top: 3px solid var(--negro);
+
+    padding-top: 25px;
+
+}
+
+
+.event-detail span {
+
+    color: var(--rojo);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+}
+
+
+.event-detail h2 {
+
+    font-size: 30px;
+
+    margin: 20px 0;
+
+}
+
+
+.event-detail p {
+
+    color: #555555;
+
+}
+
+
+/* =========================================================
+   14. EVENT DATA
+   ========================================================= */
+
+.event-data {
+
+    background-color: var(--gris);
+
+    padding: 80px 10%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 50px;
+
+}
+
+
+.event-data p {
+
+    color: var(--rojo);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.event-data h2 {
+
+    font-size: 27px;
+
+    line-height: 1.2;
+
+}
+
+
+/* =========================================================
+   15. EXPERIENCE
+   ========================================================= */
+
+.experience {
+
+    padding: 120px 10%;
+
+}
+
+
+.experience-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.experience-card {
+
+    padding: 35px;
+
+    min-height: 250px;
+
+    background-color: var(--negro);
+
+    color: white;
+
+    transition: 0.3s;
+
+}
+
+
+.experience-card:hover {
+
+    transform: translateY(-7px);
+
+}
+
+
+.experience-card span {
+
+    color: var(--rojo);
+
+    font-weight: 800;
+
+}
+
+
+.experience-card h3 {
+
+    font-size: 27px;
+
+    margin: 45px 0 15px;
+
+}
+
+
+.experience-card p {
+
+    color: #cccccc;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   16. AGENDA / TIMELINE
+   ========================================================= */
+
+.agenda {
+
+    padding: 120px 10%;
+
+    background-color: var(--gris);
+
+}
+
+
+.timeline {
+
+    max-width: 900px;
+
+}
+
+
+.timeline-item {
+
+    display: grid;
+
+    grid-template-columns: 150px 1fr;
+
+    gap: 40px;
+
+    padding: 30px 0;
+
+    border-top: 1px solid var(--borde);
+
+}
+
+
+.timeline-item:last-child {
+
+    border-bottom: 1px solid var(--borde);
+
+}
+
+
+.timeline-item > span {
+
+    color: var(--rojo);
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+}
+
+
+.timeline-item h3 {
+
+    font-size: 24px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.timeline-item p {
+
+    color: #666666;
+
+}
+
+
+/* =========================================================
+   17. SPEAKERS PAGE
+   ========================================================= */
+
+.all-speakers {
+
+    padding: 110px 10%;
+
+}
+
+
+.speaker-card-large {
+
+    display: grid;
+
+    grid-template-columns: 40% 1fr;
+
+    gap: 70px;
+
+    padding: 70px 0;
+
+    border-bottom: 1px solid var(--borde);
+
+    align-items: center;
+
+}
+
+
+.speaker-card-large:first-child {
+
+    padding-top: 0;
+
+}
+
+
+.speaker-card-large img {
+
+    width: 400px;
+
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 100%;
+
+}
+
+
+.speaker-card-large div > p:first-child {
+
+    color: var(--rojo);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.speaker-card-large h2 {
+
+    font-size: clamp(35px, 5vw, 60px);
+
+    line-height: 1;
+
+    margin: 15px 0;
+
+}
+
+
+.speaker-card-large h3 {
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    margin-bottom: 25px;
+
+}
+
+
+.speaker-card-large div > p:last-child {
+
+    color: #555555;
+
+    max-width: 600px;
+
+}
+
+
+/* =========================================================
+   18. TEAM PAGE
+   ========================================================= */
+
+.team-intro {
+
+    padding: 110px 10%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+}
+
+
+.team-intro h2 {
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+}
+
+
+.team-intro p {
+
+    margin-bottom: 20px;
+
+    color: #555555;
+
+    font-size: 17px;
+
+}
+
+
+.team {
+
+    padding: 110px 10%;
+
+    background-color: var(--gris);
+
+}
+
+
+.team-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+
+}
+
+
+.team-card {
+
+    background-color: white;
+
+    padding-bottom: 25px;
+
+}
+
+
+.team-photo {
+
+    overflow: hidden;
+
+}
+
+
+.team-card img {
+
+    width: 100%;
+
+    height: 330px;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+
+}
+
+
+.team-card:hover img {
+
+    transform: scale(1.05);
+
+}
+
+
+.team-card h3 {
+
+    font-size: 19px;
+
+    margin: 20px 20px 5px;
+
+}
+
+
+.team-card p {
+
+    color: var(--rojo);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-left: 20px;
+
+}
+
+
+/* =========================================================
+   19. CONTACTO
+   ========================================================= */
+
+.contact-section {
+
+    padding: 120px 10%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+}
+
+
+.contact-info > p:first-child {
+
+    color: var(--rojo);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.contact-info h2 {
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    line-height: 1;
+
+    margin: 20px 0 30px;
+
+}
+
+
+.contact-info > p {
+
+    color: #555555;
+
+    max-width: 500px;
+
+}
+
+
+.contact-data {
+
+    margin-top: 50px;
+
+}
+
+
+.contact-data div {
+
+    padding: 20px 0;
+
+    border-top: 1px solid var(--borde);
+
+}
+
+
+.contact-data h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.contact-data p {
+
+    color: #666666;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   20. FORMULARIO
+   ========================================================= */
+
+.contact-form {
+
+    background-color: var(--gris);
+
+    padding: 45px;
+
+}
+
+
+.contact-form form {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.contact-form label {
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+}
+
+
+.contact-form input,
+.contact-form textarea {
+
+    width: 100%;
+
+    border: none;
+
+    border-bottom: 2px solid #cccccc;
+
+    background-color: transparent;
+
+    padding: 15px 5px;
+
+    margin-bottom: 30px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s;
+
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+
+    border-bottom-color: var(--rojo);
+
+}
+
+
+.contact-form textarea {
+
+    resize: vertical;
+
+}
+
+
+.contact-form button {
+
+    border: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+}
+
+
+/* =========================================================
+   21. FAQ
+   ========================================================= */
+
+.faq {
+
+    padding: 110px 10%;
+
+    background-color: var(--negro);
+
+    color: white;
+
+}
+
+
+.faq-container {
+
+    max-width: 900px;
+
+}
+
+
+.faq details {
+
+    border-top: 1px solid #444444;
+
+    padding: 25px 0;
+
+}
+
+
+.faq details:last-child {
+
+    border-bottom: 1px solid #444444;
+
+}
+
+
+.faq summary {
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    list-style: none;
+
+    position: relative;
+
+    padding-right: 30px;
+
+}
+
+
+.faq summary::after {
+
+    content: "+";
+
+    position: absolute;
+
+    right: 0;
+
+    font-size: 25px;
+
+    color: var(--rojo);
+
+}
+
+
+.faq details[open] summary::after {
+
+    content: "−";
+
+}
+
+
+.faq details p {
+
+    color: #bbbbbb;
+
+    margin-top: 20px;
+
+    max-width: 700px;
+
+}
+
+
+/* =========================================================
+   22. FOOTER
+   ========================================================= */
+
+.footer {
+
+    background-color: #050505;
+
+    color: white;
+
+    padding: 70px 8% 30px;
+
+}
+
+
+.footer-logo h2 {
+
+    font-size: 50px;
+
+    font-weight: 800;
+
+}
+
+
+.footer-logo h2 span {
+
+    color: var(--rojo);
+
+}
+
+
+.footer-logo p {
+
+    color: #999999;
+
+    margin-top: 5px;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    gap: 30px;
+
+    margin: 45px 0 30px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.footer-links a {
+
+    font-size: 13px;
+
+    color: #cccccc;
+
+    transition: 0.3s;
+
+}
+
+
+.footer-links a:hover {
+
+    color: var(--rojo);
+
+}
+
+
+.footer-social {
+
+    display: flex;
+
+    gap: 25px;
+
+    margin-bottom: 50px;
+
+}
+
+
+.footer-social a {
+
+    font-size: 13px;
+
+    color: #999999;
+
+}
+
+
+.footer-social a:hover {
+
+    color: white;
+
+}
+
+
+.copyright {
+
+    border-top: 1px solid #333333;
+
+    padding-top: 25px;
+
+    color: #666666;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   23. RESPONSIVE - TABLETS
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+
+    .navbar {
+
+        gap: 15px;
+
+    }
+
+
+    .navbar a {
+
+        font-size: 11px;
+
+    }
+
+
+    .btn-header {
+
+        display: none;
+
+    }
+
+
+    .speaker-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .experience-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .event-details {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+
+    .event-data {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .team-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   24. RESPONSIVE - CELULAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+
+    /* HEADER */
+
+    .header {
+
+        height: auto;
+
+        padding: 18px 5%;
+
+        flex-direction: column;
+
+        gap: 18px;
+
+    }
+
+
+    .logo-container img {
+
+        width: 130px;
+
+    }
+
+
+    .navbar {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+
+    }
+
+
+    .navbar a {
+
+        font-size: 10px;
+
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: 700px;
+
+        padding: 70px 7%;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 55px;
+
+        letter-spacing: -3px;
+
+    }
+
+
+    .hero h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 14px;
+
+    }
+
+
+    /* SECCIONES */
+
+    .about,
+    .speakers-preview,
+    .experience,
+    .agenda,
+    .all-speakers,
+    .team,
+    .team-intro,
+    .contact-section {
+
+        padding: 80px 7%;
+
+    }
+
+
+    .section-title {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size: 40px;
+
+    }
+
+
+    /* EVENT */
+
+    .event-preview {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .event-image {
+
+        height: 350px;
+
+    }
+
+
+    .event-info {
+
+        padding: 70px 7%;
+
+    }
+
+
+    .event-info h2 {
+
+        font-size: 45px;
+
+    }
+
+
+    /* SPEAKERS */
+
+    .speaker-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .speaker-card img {
+
+        height: 400px;
+
+    }
+
+
+    /* PAGE HERO */
+
+    .page-hero {
+
+        min-height: 350px;
+
+        padding: 70px 7%;
+
+    }
+
+
+    .page-hero h1 {
+
+        font-size: 55px;
+
+    }
+
+
+    /* EXPERIENCE */
+
+    .experience-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* TIMELINE */
+
+    .timeline-item {
+
+        grid-template-columns: 80px 1fr;
+
+        gap: 20px;
+
+    }
+
+
+    /* SPEAKERS */
+
+    .speaker-card-large {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 50px 0;
+
+    }
+
+
+    .speaker-card-large img {
+
+        height: 400px;
+
+    }
+
+
+    /* TEAM */
+
+    .team-intro {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+
+    .team-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* CONTACTO */
+
+    .contact-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+    }
+
+
+    .contact-form {
+
+        padding: 30px 20px;
+
+    }
+
+
+    /* CTA */
+
+    .cta {
+
+        padding: 90px 7%;
+
+    }
+
+
+    .cta h2 {
+
+        font-size: 45px;
+
+    }
+
+
+    /* FOOTER */
+   
+    .footer {
+
+        padding: 60px 7% 25px;
+
+    }
+    .footer-links {
+
+        font-size: 13px;
+        color: #999999;
+        position: relative;
+        z-index: 10; 
+
+    }
+    @media screen()
+}
+/* Additions */
+.note{opacity:.7;font-size:.9rem;margin-top:24px;text-align:center}
+.disclaimer{font-size:.8rem;opacity:.7;margin-top:6px}
+.cta p.note{margin-bottom:24px}
