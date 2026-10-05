@@ -554,7 +554,7 @@ a {
 
 .speakers-preview {
 
-    padding: 120px 8%;
+    padding: 120px;
 
 }
 
@@ -1028,7 +1028,7 @@ a {
 
     object-fit: cover;
 
-    border-radius: 100%;
+    border-radius: 100%; /* ============== aca es la imafen ================================= */ 
 
 }
 
@@ -1834,7 +1834,7 @@ a {
 
         gap: 30px;
 
-        padding: 50px 0;
+        padding: 50px;
 
     }
 
