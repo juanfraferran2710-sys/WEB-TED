@@ -549,96 +549,55 @@ a {
 
 
 /* =========================================================
-   10. SPEAKERS PREVIEW
+   10. SPEAKERS PREVIEW (CORREGIDO)
    ========================================================= */
 
 .speakers-preview {
-
-    padding: 120px;
-
+    padding: 120px 10%;
 }
-
 
 .speaker-grid {
-
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 25px;
-
     margin-bottom: 40px;
-
 }
-
 
 .speaker-card {
-
-    background-color: var(--gris);
-
+    background-color: var(--blanco); /* Cambiado de #000 a blanco para eliminar la franja negra inferior */
     overflow: hidden;
-
     transition: 0.4s;
-
 }
-
 
 .speaker-card:hover {
-
     transform: translateY(-8px);
-
 }
-
 
 .speaker-card img {
-
     width: 100%;
-
-    height: 200px;
-
-    object-fit: cover;
-
+    height: 380px;             /* Define un alto uniforme para todas las fotos */
+    object-fit: cover;         /* Adapta la imagen sin deformarla */
+    object-position: top center;/* Asegura que el rostro/cabeza siempre quede visible arriba */
+    background-color: #000000; /* Mantiene el fondo negro unificado solo dentro de la foto */
     filter: grayscale(15%);
-
     transition: 0.5s;
-
 }
-
-
-.speaker-card:hover img {
-
-    filter: grayscale(0%);
-
-}
-
 
 .speaker-info {
-
     padding: 25px;
-
+    background-color: var(--gris); /* Mantiene la tarjeta limpia abajo */
 }
-
 
 .speaker-info h3 {
-
     font-size: 20px;
-
     margin-bottom: 5px;
-
 }
-
 
 .speaker-info p {
-
     color: var(--rojo);
-
     font-size: 12px;
-
     font-weight: 600;
-
 }
-
-
 /* =========================================================
    11. CTA
    ========================================================= */
@@ -1776,14 +1735,15 @@ a {
 
     .speaker-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 0;
 
     }
 
 
     .speaker-card img {
 
-        height: 400px;
+        height: 500px;
+        border-radius: 100%;
 
     }
 
