@@ -265,7 +265,7 @@ a {
             rgba(0, 0, 0, 0.60),
             rgba(0, 0, 0, 0.60)
         ),
-        url("../images/hero.jpg");
+        url("images/herodf.jpg");
 
     background-size: cover;
     background-position: center;
@@ -968,6 +968,21 @@ a {
     border-bottom: 1px solid var(--borde);
 
     align-items: center;
+
+}
+
+
+.speaker-photo-placeholder {
+
+    width: 400px;
+
+    height: 400px;
+
+    border-radius: 100%;
+
+    background: var(--gris);
+
+    border: 1px solid var(--borde);
 
 }
 
@@ -1799,7 +1814,8 @@ a {
     }
 
 
-    .speaker-card-large img {
+    .speaker-card-large img,
+    .speaker-photo-placeholder {
 
         height: 400px;
 
