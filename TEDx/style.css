@@ -899,7 +899,8 @@ a {
 
     display: grid;
 
-    grid-template-columns: 150px 1fr;
+    /* Aumentamos el ancho de la primera columna de 150px a 200px para que entre la hora en una sola línea */
+    grid-template-columns: 200px 1fr;
 
     gap: 40px;
 
@@ -908,7 +909,6 @@ a {
     border-top: 1px solid var(--borde);
 
 }
-
 
 .timeline-item:last-child {
 
